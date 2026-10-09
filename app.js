@@ -404,9 +404,15 @@ if (notesEl.hidden || active < 0) return;
 const a = sections[active].querySelector('.notes');
 notesEl.querySelector('.nb').innerHTML = a ? a.innerHTML : '<em>No notes for this slide.</em>';
 }
+const notesBtn = document.getElementById('notes-btn');
+// Presenter-only: the on-screen Notes button (for touch devices) shows only on ?presenter links
+notesBtn.hidden = !/[?&]presenter(?:[=&]|$)/.test(location.search);
+notesBtn.addEventListener('click', () => toggleNotes());
 function toggleNotes(force) {
 if (pwOpen() && force !== false) { pw.focus(); return; }
 notesEl.hidden = force != null ? !force : !notesEl.hidden; updateNotes();
+notesBtn.textContent = notesEl.hidden ? 'Notes' : 'Hide notes';
+notesBtn.setAttribute('aria-expanded', String(!notesEl.hidden));
 }
 const gridEl = document.getElementById('grid');
 let lastFocus = null;
