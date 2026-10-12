@@ -2,11 +2,8 @@
 
 Material from the **UiPath Community Mumbai** session (10 Oct) on agentic testing with UiPath Test Cloud.
 
-| Path | What it is |
-|------|------------|
-| `index.html`, `app.js`, `app.css`, `assets/` | The slide deck. Open `index.html` in a browser. |
-| `deck.single.html` | Same deck as one self-contained file. |
-| `Solution/Autonomous testing system.uis` | The UiPath solution built live in the demo. This is what the rest of this README covers. |
+- **Presentation:** https://jd2091.github.io/Uipath-autonomous-testing
+- **Solution:** `Solution/Autonomous testing system.uis` is the UiPath solution built live in the demo. The rest of this README covers it.
 
 ## What the solution does
 
